@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sales Predictor</title>
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Sales Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="CompPrice" placeholder="Competitor Price eg. 138"><br>
+                <input class="form-input" type="text" name="Income" placeholder="Income level (in thousands of dollars) eg. 73"><br>
+                <input class="form-input" type="text" name="Advertising" placeholder="advertising budget for company (in thousands of dollars) eg. 11"><br>
+                <input class="form-input" type="text" name="Population" placeholder=" Population size in region (in thousands) eg. 276"><br>
+                <input class="form-input" type="text" name="Price" placeholder="Price company charges eg. 120"><br>
+                <input class="form-input" type="text" name="Age" placeholder="Average age of the local population eg. 42"><br>
+                <input class="form-input" type="text" name="Education" placeholder="Education level eg. 17"><br>
+                <input class="form-input" type="text" name="ShelveLoc_Good" placeholder="quality of the shelving location (If good quality enter 1 otherwise 0 "><br>
+                <input class="form-input" type="text" name="ShelveLoc_Medium" placeholder="quality of the shelving location (If medium quality enter 1 otherwise 0 "><br>
+                <input class="form-input" type="text" name="Urban_Yes" placeholder="Strore location (If store is in urban enter 1 otherwise 0)"><br>
+                <input class="form-input" type="text" name="US_Yes" placeholder="Store location is in US (If yes enter 1 othwerwise 0)"><br>
+                
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Vikas Bevoor.</p>
+       </div>
+
+    </body>
+</html>
